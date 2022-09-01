@@ -1,17 +1,4 @@
-import random
 from operator import itemgetter
-
-
-def inserir_jogadores(dic):
-    qtd = int(input("Insira a quantidade de jogadores (até 4): "))
-    if qtd > 4:
-        print("Máximo de 4 jogadores!")
-        return
-    else:
-        for i in range(qtd):
-            nome = input('Insira o nome do jogador: ')
-            dado = random.randint(1, 6)
-            dic[nome] = dado
 
 
 def rankingJogoDados(jogadas):
@@ -27,7 +14,10 @@ def rankingJogoDados(jogadas):
         aux += 1
 
 
-jogos = {}
+jogos = {
+    "Vinicius": 6,
+    "Julia": 3,
+    "Gui": 4
+}
 
-inserir_jogadores(jogos)
 rankingJogoDados(jogos)
